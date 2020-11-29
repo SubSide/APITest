@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/forecast_navigation"
+    app:startDestination="@id/forecastOverviewFragment2">
+
+    <fragment
+        android:id="@+id/forecastOverviewFragment2"
+        android:name="dev.subside.apitest.forecast.ForecastOverviewFragment"
+        android:label="ForecastOverviewFragment" >
+        <action
+            android:id="@+id/action_forecastOverviewFragment2_to_forecastDetailsFragment"
+            app:destination="@id/forecastDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forecastDetailsFragment"
+        android:name="dev.subside.apitest.forecast.ForecastDetailsFragment"
+        android:label="ForecastDetailsFragment" >
+        <argument
+            android:name="forecast"
+            app:argType="dev.subside.apitest.forecast.models.Forecast" />
+    </fragment>
+</navigation>
